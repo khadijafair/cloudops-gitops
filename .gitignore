@@ -1,0 +1,24 @@
+# Python
+__pycache__/
+*.pyc
+.venv/
+.pytest_cache/
+
+# Ansible
+*.retry
+
+# Terraform
+.terraform/
+*.tfstate
+*.tfstate.*
+*.tfplan
+crash.log
+
+# Secrets
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+kubeconfig
+kubeconfig.*

@@ -1,0 +1,8 @@
+---
+- name: Prepare Ubuntu for k3s
+  hosts: cloudops
+  become: true
+  gather_facts: true
+
+  roles:
+    - k3s_prerequisites

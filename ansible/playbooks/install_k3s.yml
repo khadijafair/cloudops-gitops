@@ -1,0 +1,8 @@
+---
+- name: Install Kubernetes k3s server
+  hosts: cloudops
+  become: true
+  gather_facts: true
+
+  roles:
+    - k3s_server
