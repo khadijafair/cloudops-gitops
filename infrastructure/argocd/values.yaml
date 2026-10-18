@@ -1,0 +1,16 @@
+dex:
+  enabled: false
+
+notifications:
+  enabled: false
+
+applicationSet:
+  enabled: false
+
+server:
+  service:
+    type: ClusterIP
+
+configs:
+  params:
+    server.insecure: false
