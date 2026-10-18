@@ -1,0 +1,25 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: demo-api
+  namespace: argocd
+spec:
+  project: default
+
+  source:
+    repoURL: https://github.com/khadijafair/cloudops-gitops.git
+    targetRevision: main
+    path: helm/demo-api
+    helm:
+      releaseName: demo-api
+
+  destination:
+    server: https://kubernetes.default.svc
+    namespace: demo
+
+  syncPolicy:
+    automated:
+      prune: true
+      selfHeal: true
+    syncOptions:
+      - CreateNamespace=true
